@@ -38,27 +38,168 @@
     </nav>
   </header>
 
-  <main id="home">
-    <section class="hero section-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Enterprise Network Engineering • Secure Cloud Connectivity • Automation</p>
-        <h1>Modern network infrastructure built for uptime, speed, and clean operations.</h1>
-        <p class="hero-lede">
-          I design, troubleshoot, and optimize resilient networks across campus, data center, cloud,
-          and hybrid environments with a practical focus on routing stability, observability, security,
-          documentation, and repeatable automation.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="experience.html">View Experience</a>
-          <a class="btn btn-secondary" href="contact.html">Book Network Review</a>
-        </div>
-        <div class="hero-stats" aria-label="Professional highlights">
-          <span><strong>99.99%</strong><small>availability mindset</small></span>
-          <span><strong>BGP / OSPF</strong><small>routing depth</small></span>
-          <span><strong>Zero-trust</strong><small>secure access focus</small></span>
+<main id="home">
+  <section class="hero section-shell hero-enhanced">
+
+    <div class="hero-copy hero-center">
+
+      <p class="eyebrow">
+        Enterprise Network Engineering • Secure Cloud Connectivity • Automation
+      </p>
+
+      <h1>
+        Modern network infrastructure built for uptime, speed, and clean operations.
+      </h1>
+
+      <p class="hero-lede">
+        I design, troubleshoot, and optimize resilient networks across campus, data center, cloud,
+        and hybrid environments with a practical focus on routing stability, observability, security,
+        documentation, and repeatable automation.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="experience.html">View Experience</a>
+        <a class="btn btn-secondary" href="contact.html">Book Network Review</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Professional highlights">
+        <span><strong>99.99%</strong><small>availability mindset</small></span>
+        <span><strong>BGP / OSPF</strong><small>routing depth</small></span>
+        <span><strong>Zero-trust</strong><small>secure access focus</small></span>
+      </div>
+
+      <!-- 🔥 SOCIAL ROW FILLS UNUSED SPACE CLEANLY -->
+      <div class="hero-social">
+        <div class="brand-badge-row green-theme">
+
+          <a href="https://www.upwork.com/freelancers/~016bcaceaa7f29db64" target="_blank" class="badge-item compact-badge">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.6 8.9v3.1a4.4 4.4 0 0 0 8.8 0V8.9"/></svg>
+            </span>
+            <span class="copy"><span class="label">Upwork</span><span class="sub">Freelancing</span></span>
+          </a>
+
+          <a href="https://linktr.ee/blairpage" target="_blank" class="badge-item compact-badge">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 128 128"><rect x="28" y="28" width="72" height="72" rx="20"/></svg>
+            </span>
+            <span class="copy"><span class="label">Linktree</span><span class="sub">blairpage</span></span>
+          </a>
+
+          <a href="#" class="badge-item compact-badge">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M20.3 4.3..."/></svg>
+            </span>
+            <span class="copy"><span class="label">Discord</span><span class="sub">BlairPage</span></span>
+          </a>
+
+          <a href="https://wa.me/16502489346" target="_blank" class="badge-item compact-badge">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M12 2..."/></svg>
+            </span>
+            <span class="copy"><span class="label">WhatsApp</span><span class="sub">Message</span></span>
+          </a>
+
         </div>
       </div>
 
+    </div>
+  </section>
+</main>
+
+<style>
+/* ===== CENTER + FULL WIDTH USAGE ===== */
+.hero-enhanced {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-center {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* TEXT */
+.hero-lede {
+  max-width: 900px;
+}
+
+/* BUTTONS */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* STATS */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* 🔥 SOCIAL FILLS SPACE NICELY */
+.hero-social {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ROW */
+.green-theme {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ICONS */
+.icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  fill: #22c55e;
+}
+
+.label {
+  color: #4ade80;
+  font-weight: 700;
+}
+
+.sub {
+  color: #bbf7d0;
+}
+
+/* HOVER */
+.badge-item:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(34,197,94,0.4));
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-center {
+    padding: 0 16px;
+  }
+
+  .green-theme {
+    gap: 10px;
+    max-width: 260px; /* forces clean wrap */
+  }
+}
+</style>
     
     </section>
 
