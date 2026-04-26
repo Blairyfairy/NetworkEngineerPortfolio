@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Alex Mercer Network Engineer</title>
+  <meta name="description" content="Expanded network engineer portfolio page for enterprise routing, cloud networking, security, automation, and support operations." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="mesh-bg" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Alex Mercer home"><span class="brand-mark">AM</span><span class="brand-text"><strong>Alex Mercer</strong><small>Network Engineer</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="about.html">About</a><a href="experience.html">Experience</a><a href="skills.html">Skills</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-cta">Contact</a><a href="../portfolio-card/" class="nav-card-link">Card</a>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="section-shell page-hero compact-page-hero"><p class="eyebrow">Blog</p><h1>Practical network notes, runbooks, and architecture thinking.</h1><p class="hero-lede">Separate blog page with expanded article previews instead of single-page anchors.</p></section><section class="section-shell blog-page-list"><article id="packet-loss-runbook"><p class="eyebrow">Runbook</p><h2>How I troubleshoot intermittent packet loss without guessing</h2><p>Start with impact scope, time windows, topology, interface counters, link errors, queue drops, flow records, and recent changes. Then isolate path behavior with MTR, traceroute, captures, and device telemetry before changing configuration.</p><a class="btn btn-secondary" href="contact.html">Request a sample runbook</a></article><article id="hub-spoke"><p class="eyebrow">Cloud</p><h2>Designing a hub-and-spoke network operations can support</h2><p>A clean cloud network needs named route ownership, inspection paths, private DNS patterns, tag governance, blast-radius control, monitoring, and diagrams that match production reality.</p><a class="btn btn-secondary" href="contact.html">Discuss architecture</a></article><article><p class="eyebrow">Security</p><h2>Firewall cleanup that reduces risk without breaking production</h2><p>The safest cleanup path is staged: discover, classify, identify owners, verify traffic, test removal, keep rollback ready, and document why each rule exists or should disappear.</p><a class="btn btn-secondary" href="contact.html">Plan a review</a></article></section>
+  </main>
+  <button class="scroll-top-btn" type="button" aria-label="Scroll to top">▲</button>
+  <footer><p>© <span id="year"></span> Alex Mercer. Network Engineering • Automation • Cloud Connectivity.</p></footer>
+</body>
+</html>
