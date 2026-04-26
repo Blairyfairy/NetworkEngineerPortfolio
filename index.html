@@ -77,52 +77,56 @@
 </div>
 
 <style>
-/* GREEN THEME ONLY — SAME SIZE / SAME LAYOUT */
+/* === MATCH EXISTING SITE GREEN EXACTLY === */
+
 .brand-badge-row svg circle,
 .brand-badge-row svg rect,
 .brand-badge-row svg ellipse,
 .brand-badge-row svg path {
-  fill: #22c55e !important;
+  fill: #48d597 !important; /* your real site green */
 }
 
-.brand-badge-row svg polygon,
+/* inner white shapes stay clean */
 .brand-badge-row svg rect[fill="#f0eff4"],
 .brand-badge-row svg circle[fill="#f0eff4"],
+.brand-badge-row svg polygon[fill="#f0eff4"],
 .brand-badge-row svg ellipse[fill="#f0eff4"] {
   fill: #eafff1 !important;
 }
 
+/* strokes */
 .brand-badge-row svg path[stroke],
 .brand-badge-row svg circle[stroke],
 .brand-badge-row svg rect[stroke] {
-  stroke: #eafff1 !important;
+  stroke: #dfffe8 !important;
 }
 
+/* gradients (666 badge etc) */
 .brand-badge-row stop:first-child {
   stop-color: #eafff1 !important;
 }
-
 .brand-badge-row stop:nth-child(2) {
-  stop-color: #4ade80 !important;
+  stop-color: #8ff0bd !important;
 }
-
 .brand-badge-row stop:last-child {
-  stop-color: #15803d !important;
+  stop-color: #48d597 !important;
 }
 
+/* text */
 .brand-badge-row .label {
-  color: #4ade80 !important;
+  color: #8ff0bd !important;
 }
 
 .brand-badge-row .sub {
-  color: #bbf7d0 !important;
-  opacity: 0.85 !important;
+  color: #c8ffdc !important;
+  opacity: 0.82 !important;
 }
 
+/* hover (match your glow) */
 .brand-badge-row .badge-item:hover {
   filter:
-    drop-shadow(0 10px 18px rgba(0,0,0,0.6))
-    drop-shadow(0 0 10px rgba(34,197,94,0.38)) !important;
+    drop-shadow(0 8px 14px rgba(0,0,0,0.5))
+    drop-shadow(0 0 10px rgba(70,255,160,0.28)) !important;
 }
 </style>
       </div>
