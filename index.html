@@ -68,7 +68,62 @@
         <span><strong>Zero-trust</strong><small>secure access focus</small></span>
       </div>
     </div>
+<style>/* Force full width container */
+.hero-full {
+  width: 100%;
+  max-width: 100% !important;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
 
+/* Remove internal constraint */
+.hero-full-width {
+  width: 100%;
+  max-width: 1400px; /* keeps it readable, remove if you want literal edge-to-edge text */
+  margin: 0 auto;
+}
+
+/* Improve layout scaling */
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Buttons stay clean and aligned */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Stats evenly spaced full width */
+.hero-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.hero-stats span {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+/* Mobile tightening */
+@media (max-width: 768px) {
+  .hero-full {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-stats {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}</style>
   </section>
 </main>
     
