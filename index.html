@@ -228,7 +228,69 @@
       </div>
     </section>
   </main>
+<style>
+  html,
+  body {
+    background-color: #050816 !important;
+    background: #050816 !important;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -9999;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(88, 166, 255, 0.18), transparent 32%),
+      radial-gradient(circle at 80% 0%, rgba(177, 108, 255, 0.14), transparent 34%),
+      linear-gradient(135deg, #050816 0%, #08111f 48%, #030712 100%);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .mesh-bg {
+    position: fixed !important;
+    inset: 0 !important;
+    min-height: 100vh !important;
+    width: 100vw !important;
+    pointer-events: none !important;
+    z-index: -2 !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    will-change: transform !important;
+  }
+
+  main,
+  section,
+  .section-shell,
+  .hero,
+  .site-header,
+  footer {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  img,
+  svg {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  @media (max-width: 768px) {
+    html,
+    body {
+      background-color: #050816 !important;
+    }
+
+    body::before {
+      position: fixed;
+      min-height: 100svh;
+    }
+  }
+</style>
   <button class="scroll-top-btn" type="button" aria-label="Scroll to top">▲</button>
 
   <footer>
