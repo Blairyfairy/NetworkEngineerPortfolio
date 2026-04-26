@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Alex Mercer Network Engineer</title>
-  <meta name="description" content="Expanded network engineer portfolio page for enterprise routing, cloud networking, security, automation, and support operations." />
+  <title>Gallery | Daniel Sean Network Engineer</title>
+  <meta name="description" content="Lazy-loaded Daniel Sean network engineer gallery using a separate 100 image JSON list with responsive rounded sliders and thumbnails." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/app.js"></script>
@@ -12,16 +12,26 @@
 <body>
   <div class="mesh-bg" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Alex Mercer home"><span class="brand-mark">AM</span><span class="brand-text"><strong>Alex Mercer</strong><small>Network Engineer</small></span></a>
+    <a class="brand" href="index.html" aria-label="Daniel Sean home"><span class="brand-mark">DS</span><span class="brand-text"><strong>Daniel Sean</strong><small>Network Engineer</small></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="about.html">About</a><a href="experience.html">Experience</a><a href="skills.html">Skills</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-cta">Contact</a><a href="../portfolio-card/" class="nav-card-link">Card</a>
     </nav>
   </header>
   <main id="home">
-    <section class="section-shell page-hero compact-page-hero"><p class="eyebrow">Gallery</p><h1>Visual network stories for diagrams, dashboards, and architecture work.</h1><p class="hero-lede">A separate gallery page with larger project cards and stronger visual context.</p></section><section class="section-shell gallery-page-grid"><figure><img src="assets/img/gallery-core.svg" alt="Core routing diagram preview" /><figcaption><strong>Core Routing Refresh</strong><span>Redundant routing, documented failover, route filtering, and cleaner operations paths.</span></figcaption></figure><figure><img src="assets/img/gallery-cloud.svg" alt="Cloud network diagram preview" /><figcaption><strong>Hybrid Cloud Transit</strong><span>Hub-and-spoke VPC/VNet design with private paths, inspection, and route ownership.</span></figcaption></figure><figure><img src="assets/img/gallery-observe.svg" alt="Monitoring dashboard preview" /><figcaption><strong>Observability Stack</strong><span>SNMP, syslog, NetFlow, packet captures, counters, dashboards, and alert hygiene.</span></figcaption></figure><figure><img src="assets/img/gallery-secure.svg" alt="Secure segmentation preview" /><figcaption><strong>Firewall Segmentation</strong><span>Least-privilege cleanup staged through discovery, owner review, testing, and rollback.</span></figcaption></figure></section>
+    <section class="section-shell page-hero compact-page-hero">
+      <p class="eyebrow">Gallery / JSON Image Rail</p>
+      <h1>Daniel Sean visual gallery with 100-file lazy loading.</h1>
+      <p class="hero-lede">This gallery reads <code>assets/img/gallery-images.json</code>, tries <code>img1.jpg</code> through <code>img100.jpg</code> plus alternate image extensions, and only loads the visible slide plus nearby thumbnails so mobile stays fast.</p>
+    </section>
+    <section class="section-shell deep-gallery-shell" aria-label="Daniel Sean portfolio gallery">
+      <div class="gallery-stage"><button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">‹</button><figure class="gallery-active-card"><img id="galleryActiveImage" src="assets/img/gallery-core.svg" alt="Gallery image placeholder" loading="eager" /><figcaption><strong id="galleryActiveTitle">Waiting for real gallery image input</strong><span id="galleryActiveCaption">Clearly nonsense placeholder copy until actual content is provided: neon routers riding a packet dragon through Daniel Sean's midnight-blue switch closet.</span></figcaption></figure><button class="gallery-arrow gallery-next" type="button" aria-label="Next image">›</button></div>
+      <div class="gallery-meta-row"><span id="galleryCounter">Image 1 of 100</span><span>Rounded corners • lazy groups • JPG-first with PNG/WebP/GIF/SVG fallback</span></div>
+      <div id="galleryThumbRail" class="gallery-thumb-rail" aria-label="Gallery thumbnails"></div>
+    </section>
+    <section class="section-shell gallery-page-grid fallback-gallery-grid"><figure><img src="assets/img/gallery-core.svg" alt="Core routing diagram preview" /><figcaption><strong>Core Routing Refresh</strong><span>Placeholder until Daniel Sean supplies the final caption text.</span></figcaption></figure><figure><img src="assets/img/gallery-cloud.svg" alt="Cloud network diagram preview" /><figcaption><strong>Hybrid Cloud Transit</strong><span>Placeholder until Daniel Sean supplies the final caption text.</span></figcaption></figure><figure><img src="assets/img/gallery-observe.svg" alt="Monitoring dashboard preview" /><figcaption><strong>Observability Stack</strong><span>Placeholder until Daniel Sean supplies the final caption text.</span></figcaption></figure><figure><img src="assets/img/gallery-secure.svg" alt="Secure segmentation preview" /><figcaption><strong>Firewall Segmentation</strong><span>Placeholder until Daniel Sean supplies the final caption text.</span></figcaption></figure></section>
   </main>
   <button class="scroll-top-btn" type="button" aria-label="Scroll to top">▲</button>
-  <footer><p>© <span id="year"></span> Alex Mercer. Network Engineering • Automation • Cloud Connectivity.</p></footer>
+  <footer><p>© <span id="year"></span> Daniel Sean. Network Engineering • Automation • Cloud Connectivity.</p></footer>
 </body>
 </html>
