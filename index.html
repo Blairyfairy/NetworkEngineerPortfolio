@@ -399,7 +399,67 @@
   </a>
 </div>
 
+<style>
+/* ===== FORCE EVERYTHING TO USE EXACT EYEBROW COLOR ===== */
 
+:root {
+  --real-green: #00ff00; /* temporary fallback */
+}
+
+/* TEXT */
+.brand-badge-row .label,
+.brand-badge-row .sub {
+  color: var(--real-green) !important;
+}
+
+/* ICON SHAPES (OVERRIDE INLINE SVG COLORS) */
+.brand-badge-row svg * {
+  fill: var(--real-green) !important;
+}
+
+/* INNER WHITE PARTS (restore contrast) */
+.brand-badge-row svg [fill="#f0eff4"],
+.brand-badge-row svg [fill="#eafff1"] {
+  fill: #eafff1 !important;
+}
+
+/* STROKES */
+.brand-badge-row svg [stroke] {
+  stroke: #eafff1 !important;
+}
+
+/* GRADIENT FIX */
+.brand-badge-row stop {
+  stop-color: var(--real-green) !important;
+}
+
+/* HOVER */
+.brand-badge-row .badge-item:hover {
+  filter:
+    drop-shadow(0 8px 14px rgba(0,0,0,0.5))
+    drop-shadow(0 0 12px var(--real-green)) !important;
+}
+</style>
+
+<script>
+/* ===== FORCE SYNC WITH ACTUAL SITE GREEN ===== */
+(function () {
+  function forceExactGreen() {
+    const eyebrow = document.querySelector(".eyebrow");
+    if (!eyebrow) return;
+
+    const realColor = getComputedStyle(eyebrow).color;
+
+    document.documentElement.style.setProperty("--real-green", realColor);
+  }
+
+  // run multiple times to beat load timing issues
+  document.addEventListener("DOMContentLoaded", forceExactGreen);
+  window.addEventListener("load", forceExactGreen);
+  setTimeout(forceExactGreen, 100);
+  setTimeout(forceExactGreen, 500);
+})();
+</script>
 
 <style>
 
