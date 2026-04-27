@@ -72,7 +72,78 @@
 
 <div class="brand-badge-row">
 
-  <!-- keep your exact same full link/logo row here unchanged -->
+<style>
+  /* FORCE SOCIAL ROW TO USE THE EXACT SAME GREEN AS .eyebrow */
+  :root {
+    --badge-theme-green: currentColor;
+    --badge-theme-green-soft: currentColor;
+  }
+
+  .brand-badge-row {
+    color: var(--badge-theme-green) !important;
+  }
+
+  .brand-badge-row .label,
+  .brand-badge-row .sub {
+    color: var(--badge-theme-green) !important;
+  }
+
+  .brand-badge-row .sub {
+    opacity: 0.82 !important;
+  }
+
+  .brand-badge-row svg circle,
+  .brand-badge-row svg rect,
+  .brand-badge-row svg ellipse,
+  .brand-badge-row svg path {
+    fill: var(--badge-theme-green) !important;
+  }
+
+  .brand-badge-row svg path[stroke],
+  .brand-badge-row svg circle[stroke],
+  .brand-badge-row svg rect[stroke] {
+    stroke: var(--badge-theme-green-soft) !important;
+  }
+
+  .brand-badge-row svg rect[fill="#f0eff4"],
+  .brand-badge-row svg circle[fill="#f0eff4"],
+  .brand-badge-row svg polygon[fill="#f0eff4"],
+  .brand-badge-row svg ellipse[fill="#f0eff4"] {
+    fill: var(--badge-theme-green-soft) !important;
+  }
+
+  .brand-badge-row stop:first-child {
+    stop-color: var(--badge-theme-green-soft) !important;
+  }
+
+  .brand-badge-row stop:nth-child(2),
+  .brand-badge-row stop:last-child {
+    stop-color: var(--badge-theme-green) !important;
+  }
+
+  .brand-badge-row .badge-item:hover {
+    filter:
+      drop-shadow(0 8px 14px rgba(0,0,0,0.5))
+      drop-shadow(0 0 10px color-mix(in srgb, var(--badge-theme-green) 45%, transparent)) !important;
+  }
+</style>
+
+<script>
+  (() => {
+    function syncBadgeGreenToEyebrow() {
+      const eyebrow = document.querySelector(".eyebrow");
+      if (!eyebrow) return;
+
+      const exactGreen = getComputedStyle(eyebrow).color;
+
+      document.documentElement.style.setProperty("--badge-theme-green", exactGreen);
+      document.documentElement.style.setProperty("--badge-theme-green-soft", exactGreen);
+    }
+
+    document.addEventListener("DOMContentLoaded", syncBadgeGreenToEyebrow);
+    window.addEventListener("load", syncBadgeGreenToEyebrow);
+  })();
+</script>
 
 </div>
 
