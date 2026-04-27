@@ -886,74 +886,80 @@
   }
 </style>
   <style>
-/* ===== KEEP CONTAINER EXACT SAME SIZE ===== */
+/* =========================
+   FINAL HERO LAYOUT FIX
+   (DO NOT MODIFY EXISTING CODE)
+   ========================= */
+
+/* allow full usable width inside hero */
 .hero .hero-copy {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* ONLY THIS LINE LEFT */
+.hero .eyebrow {
+  text-align: left !important;
+  width: 100% !important;
+}
+
+/* EVERYTHING ELSE CENTERED + FULL WIDTH */
+.hero h1,
+.hero .hero-lede,
+.hero .hero-actions,
+.hero .hero-stats,
+.hero .brand-badge-row {
+  width: 100% !important;
+  text-align: center !important;
+  justify-content: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* ===== LEFT ALIGN ONLY HEADER TEXT ===== */
-.hero .eyebrow,
-.hero h1 {
-  width: 100% !important;
-  text-align: left !important;
-}
-
-/* ===== CENTER EVERYTHING ELSE (FULL WIDTH USE) ===== */
+/* paragraph should actually expand */
 .hero .hero-lede {
-  width: 100% !important;
-  max-width: 100% !important;
-  text-align: center !important;
+  max-width: 900px !important;
 }
 
-/* BUTTONS */
+/* buttons */
 .hero .hero-actions {
-  width: 100% !important;
   display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  flex-wrap: wrap !important;
   gap: 12px !important;
-  flex-wrap: wrap !important;
 }
 
-/* STATS */
+/* stats */
 .hero .hero-stats {
-  width: 100% !important;
   display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 32px !important;
   flex-wrap: wrap !important;
-  text-align: center !important;
+  gap: 28px !important;
 }
 
-/* SOCIAL ROW */
-.brand-badge-row {
-  width: 100% !important;
+/* social row */
+.hero .brand-badge-row {
   display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
   flex-wrap: wrap !important;
+  gap: 8px !important;
 }
 
-/* MOBILE SAFETY */
+/* MOBILE */
 @media (max-width: 768px) {
-  .hero .eyebrow,
-  .hero h1 {
-    text-align: left !important;
+  .hero .hero-copy {
+    padding: 0 16px !important;
   }
 
+  .hero h1,
   .hero .hero-lede,
   .hero .hero-actions,
   .hero .hero-stats,
-  .brand-badge-row {
+  .hero .brand-badge-row {
     text-align: center !important;
     justify-content: center !important;
   }
 }
 </style>
-  
 </body>
 </html>
